@@ -3,7 +3,9 @@
 <div class="row">
     @isset($product)
         @if( ((count($product)) === 0))
-                  <h3>No medicines!</h3>
+        <div class="col-sm-6 col-lg-4 text-center item mb-4">
+            <h3>No medicines!</h3>
+          </div>
          @else
          @foreach ($product as $product_)
 
