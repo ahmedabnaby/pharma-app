@@ -19,6 +19,7 @@ Route::get('/delete', 'App\Http\Controllers\ProductsController@delete')->name('p
 Route::get('/save-order', 'App\Http\Controllers\ProductsController@saveOrder')->name('saveOrder');
 Route::get('/view-order', 'App\Http\Controllers\ProductsController@viewOrder')->name('viewOrder');
 Route::get('/orders','App\Http\Controllers\OrderController@index')->name('orders')->middleware('auth');
+Route::post('/search', 'App\Http\Controllers\ProductsController@search')->name('search');
 
 
 Route::get('/add-to-cart/{product}', 'App\Http\Controllers\CartController@addToCart')->name('cart.add')->middleware('auth');

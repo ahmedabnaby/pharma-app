@@ -121,4 +121,10 @@ class ProductsController extends Controller
             return redirect()->route('orders')->with('success',"Payment done!, Thankyou ;)");
         
     }
+    public function search(Request $request)
+    {
+        $name = $request->name;
+        $product = Product::where('name',$name)->get();
+        return view('products.search_results')->with('product',$product); 
+    }
 }

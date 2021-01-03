@@ -1,13 +1,13 @@
 <div class="site-navbar py-2">
-
-    <div class="search-wrap">
-      <div class="container">
-        <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
-        <form action="#" method="post">
-          <input type="text" class="form-control" placeholder="Search keyword and hit enter...">
-        </form>
-      </div>
+  <div class="search-wrap">
+    <div class="container">
+      <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
+      <form action="/search" class="search-job" method="POST">
+        @csrf
+        <input type="text" name="name" class="form-control" placeholder="Search keyword and hit enter...">
+      </form>
     </div>
+  </div>
 
     <div class="container">
       <div class="d-flex align-items-center justify-content-between">
@@ -53,6 +53,7 @@
           </nav>
         </div>
         <div class="icons">
+          <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
           <a href="{{route('cart')}}" class="icons-btn d-inline-block bag">
             <span class="icon-shopping-bag"></span>
             <span class="number"> 
